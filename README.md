@@ -66,7 +66,12 @@
       width: 100px;
       height: 100px;
       object-fit: cover;
-      margin-bottom: 10px;
+      margin: 20px auto;
+      display: block;
+    }
+    .profile-details {
+      text-align: center;
+      margin-top: 20px;
     }
   </style>
 </head>
@@ -113,7 +118,14 @@
       <input type="number" id="profileIdNo" placeholder="ID No (Optional)">
       <button type="submit">Save</button>
     </form>
-    <button id="editProfile" style="display: none;">Edit Profile</button>
+    <div class="profile-details">
+      <p id="savedFirstName"></p>
+      <p id="savedLastName"></p>
+      <p id="savedEmail"></p>
+      <p id="savedLocation"></p>
+      <p id="savedIdNo"></p>
+      <button id="continueButton">Continue</button>
+    </div>
   </div>
 
   <script>
@@ -193,11 +205,4 @@
 
     // Function to load profile data
     function loadProfile() {
-      document.getElementById('profileFirstName').value = localStorage.getItem('firstName');
-      document.getElementById('profileLastName').value = localStorage.getItem('lastName');
-      document.getElementById('profileEmail').value = localStorage.getItem('email');
-      document.getElementById('profileLocation').value = localStorage.getItem('location');
-      document.getElementById('profileIdNo').value = localStorage.getItem('idNo');
-    }
-
-    // Profile form submission
+      document.getElementById('profileFirstName').value = localStorage.getItem('firstName
